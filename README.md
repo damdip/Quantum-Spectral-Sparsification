@@ -9,7 +9,7 @@
 
 ## Panoramica
 
-Questo repository raccoglie l'implementazione Qiskit dell'algoritmo descritto nella tesi. L'idea di fondo è che la disegnabilità spettrale di un grafo dipende dalla sua connettività algebrica $\lambda_2$ (il secondo autovalore della laplaciana $L$): se $\lambda_2 > \gamma$, con $\gamma = 10/\sqrt{N}$, il grafo può risultare troppo "connesso" per un disegno spettrale leggibile. L'algoritmo cerca, con un vantaggio quadratico rispetto alla ricerca esaustiva classica oltre una soglia di crossover $k^*$, un sottoinsieme di archi $S$ tale che la laplaciana ridotta $L(S) = L - \sum_{e \in S} L_e$ abbia $\lambda_2(L(S)) \le \tau_N$.
+Questo repository raccoglie l'implementazione Qiskit dell'algoritmo descritto nella tesi. L'idea di fondo è che la disegnabilità spettrale di un grafo dipende dalla sua connettività algebrica $\lambda_2$ (il secondo autovalore della laplaciana $L$): se $\lambda_2 > \gamma$, con $\gamma = 10/\sqrt{N}$, il grafo può risultare troppo "connesso" per un disegno spettrale leggibile. L'algoritmo cerca, con un vantaggio quadratico rispetto alla ricerca esaustiva classica oltre una soglia di crossover $k^*$, un sottoinsieme di archi $S$ tale che la laplaciana ridotta $L(S) = L - \sum_{e \in S} L_e$ abbia $\lambda_2(L(S)) \le \gamma$.
 
 L'architettura combina tre ingredienti quantistici:
 
