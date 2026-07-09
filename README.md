@@ -1,4 +1,4 @@
-# Spectral Graph Drawing in a Quantum Key
+# Quantum Spectral Sparsification
 
 > Algoritmo quantistico per la *quantum spectral sparsification*: individuazione di sottoinsiemi di archi la cui rimozione abbassa la connettività algebrica $\lambda_2$ di un grafo al di sotto di una soglia di disegnabilità $\tau_N$, tramite una combinazione di Quantum Phase Estimation (QPE), simulazione hamiltoniana Trotterizzata per-arco e algoritmo di Grover.
 
