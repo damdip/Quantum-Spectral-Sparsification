@@ -1,6 +1,6 @@
 # Quantum Spectral Sparsification
 
-> Algoritmo quantistico per la *quantum spectral sparsification*: individuazione di sottoinsiemi di archi la cui rimozione abbassa la connettività algebrica $\lambda_2$ di un grafo al di sotto di una soglia di disegnabilità $\tau_N$, tramite una combinazione di Quantum Phase Estimation (QPE), simulazione hamiltoniana Trotterizzata per-arco e algoritmo di Grover.
+> Algoritmo quantistico per la *quantum spectral sparsification*: individuazione di sottoinsiemi di archi la cui rimozione abbassa la connettività algebrica $\lambda_2$ di un grafo al di sotto di una soglia di disegnabilità $\gamma$, tramite una combinazione di Quantum Phase Estimation (QPE), simulazione hamiltoniana Trotterizzata per-arco e algoritmo di Grover.
 
 **Autore:** Damiano Di Padova
 **Tesi:** *Spectral Graph Drawing in a Quantum Key* (Quantum Spectral Sparsification)
@@ -21,10 +21,10 @@ L'architettura combina tre ingredienti quantistici:
 
 | Notebook | Contenuto |
 |---|---|
-| `01_spectral_graph_drawing.ipynb` | Disegno spettrale dei grafi: calcolo degli autovettori della laplaciana e loro utilizzo come coordinate di embedding, con esempi su diverse famiglie di grafi (cammini, cicli, grafi espansori). |
-| `02_hamiltonian_simulation_per_edge.ipynb` | Simulazione hamiltoniana Trotterizzata a livello di singolo arco: costruzione dei circuiti per $e^{-iL_e t}$, verifica della convergenza del prodotto di Trotter all'aumentare del numero di passi $r$, confronto con l'esponenziale esatto della laplaciana completa. |
-| `03_qpe_edge_removal.ipynb` | QPE applicata all'operatore parametrico $\sum_S \lvert S\rangle\langle S\rvert \otimes e^{iL(S)t}$: costruzione del registro indice in sovrapposizione, oracolo di soglia OR/NOR su $\lambda_2$, gestione dei casi limite (falsi positivi/negativi) dell'oracolo. |
-| `04_spectral_sparsification_circuit.ipynb` | Circuito completo: ricerca di Grover sul registro indice con QPE come sotto-routine, decomposizione MCX ricorsiva (Barenco et al., Lemma 7.3) per l'operatore di diffusione, conteggio ottimale delle iterazioni di Grover ed esperimenti end-to-end su grafi di piccole dimensioni. |
+
+| `HamiltoniaSimulationByEdgeTrotterization.ipynb` | Simulazione hamiltoniana Trotterizzata a livello di singolo arco: costruzione dei circuiti per $e^{-iL_e t}$, verifica della convergenza del prodotto di Trotter all'aumentare del numero di passi $r$, confronto con l'esponenziale esatto della laplaciana completa. |
+| `ParametricQpeWithEdgeElimination.ipynb` | QPE applicata all'operatore parametrico $\sum_S \lvert S\rangle\langle S\rvert \otimes e^{iL(S)t}$: costruzione del registro indice in sovrapposizione, oracolo di soglia OR/NOR su $\lambda_2$, gestione dei casi limite (falsi positivi/negativi) dell'oracolo. |
+| `QuantumSpectralSparsification.ipynb` | Circuito completo: ricerca di Grover sul registro indice con QPE come sotto-routine conteggio ottimale delle iterazioni di Grover ed esperimenti end-to-end su grafi di piccole dimensioni. |
 
 ## Requisiti
 
